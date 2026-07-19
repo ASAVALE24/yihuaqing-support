@@ -58,27 +58,12 @@ a:focus-visible {
 }
 
 .mark {
-  position: relative;
-  width: 27px;
-  height: 31px;
-}
-
-.mark::before,
-.mark::after {
-  content: "";
-  position: absolute;
-  inset: 0 2px 4px 5px;
-  border: 1.5px solid var(--ink);
-  border-radius: 6px;
-  background: var(--paper);
-}
-
-.mark::before { transform: translate(4px, -3px); }
-
-.mark::after {
-  transform: translate(-2px, 3px);
-  background:
-    linear-gradient(135deg, transparent 0 66%, var(--ink) 67% 69%, transparent 70%);
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 7px;
+  background: var(--paper) url("app-icon-192.png") center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08);
 }
 
 .nav {
@@ -201,4 +186,3 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; }
 }
-
